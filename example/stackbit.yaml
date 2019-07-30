@@ -649,4 +649,19 @@ models:
               name: url
               label: URL
               widget: url
+  404:
+    type: page
+    label: Page
+    description: Generic page layout
+    file: 404.md
+    template: page
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: string
+        name: premalink
+        label: Permalink
+        const: "/404.html"
             
