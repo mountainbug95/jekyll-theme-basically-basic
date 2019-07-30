@@ -293,4 +293,92 @@ models:
             - type: markdown
               name: reference
               label: Reference
-              
+  theme:
+    type: data
+    label: Theme Data
+    description: General data for the theme
+    file: theme.yml
+    fields:
+      - type: enum
+        name: skin
+        label: Skin
+        description: The skin used for the theme
+        options:
+          - default
+          - night
+          - plum
+          - sea
+          - soft
+          - steel
+        required: true
+        default: default
+      - type: object
+        name: t
+        label: General Text
+        description: The text displayed in different buttons/elements throughout the template
+        fields:
+          - type: string
+            name: skip_links
+            label: Skip Links
+            default: "text not set"
+          - type: string
+            name: skip_primary_nav
+            label: Skip Primary Nav
+            default: "text not set"
+          - type: string
+            name: skip_content
+            label: Skip Content
+            default: "text not set"
+          - type: string
+            name: skip_footer
+            label: Skip Footer
+            default: "text not set"
+          - type: string
+            name: menu
+            label: Menu
+            default: "text not set"
+          - type: string
+            name: home
+            label: Home
+            default: "text not set"
+          - type: string
+            name: newer
+            label: Newer
+            default: "text not set"
+          - type: string
+            name: older
+            label: Older
+            default: "text not set"
+          - type: string
+            name: email
+            label: Email
+            default: "text not set"
+          - type: string
+            name: subscribe
+            label: Subscribe
+            default: "text not set"
+          - type: string
+            name: read_more
+            label: Read More
+            default: "text not set"
+          - type: string
+            name: posts
+            label: Posts
+            default: "text not set"
+          - type: string
+            name: page
+            label: Page
+            default: "text not set"
+          - type: string
+            nasme: of
+            label: Of
+            default: "text not set"
+          - type: string
+            name: min_read
+            label: Min Read
+            default: "text not set"
+          - type: string
+            name: present
+            label: Present
+            default: "text not set"
+            
