@@ -664,4 +664,27 @@ models:
         name: premalink
         label: Permalink
         const: "/404.html"
+  post:
+    type: page
+    label: Post
+    folder: "_posts"
+    template: post
+    fields:
+      - type: string
+        name: title
+        label: Post Title
+        required: true
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: date
+        name: last_modified_at
+        label: Date Last Modified
             
