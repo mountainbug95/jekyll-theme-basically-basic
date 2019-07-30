@@ -707,4 +707,20 @@ models:
         name: entries_layout
         label: Entries Layout
         const: "list"
+  tags:
+    type: page
+    label: Tags
+    description: The tags archive
+    singleInstance: true
+    file: tags.md
+    template: tags
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        const: "/tags/"
             
