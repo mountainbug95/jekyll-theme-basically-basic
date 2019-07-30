@@ -404,4 +404,17 @@ models:
         description: "A list of pages to be displayed in the site menu (must reference .md files)"
         items:
           type: string
+  about:
+    type: page
+    label: About Page
+    description: The about page
+    singleInstance: true
+    file: about.md
+    template: about
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      
             
