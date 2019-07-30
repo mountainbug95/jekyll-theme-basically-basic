@@ -584,5 +584,20 @@ models:
         name: title
         label: Page Title
         required: true
-      
+  categories:
+    type: page
+    label: Categories Page
+    description: The categories page
+    singleInstance: true
+    file: categories.md
+    template: categories
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        const: "/categories/"
             
