@@ -687,4 +687,24 @@ models:
       - type: date
         name: last_modified_at
         label: Date Last Modified
+  posts:
+    type: page
+    label: Posts
+    description: The posts page
+    singleInstance: true
+    file: posts.md
+    template: posts
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        const: "/posts/"
+      - type: string
+        name: entries_layout
+        label: Entries Layout
+        const: "list"
             
