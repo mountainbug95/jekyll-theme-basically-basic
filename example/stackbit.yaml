@@ -723,4 +723,21 @@ models:
         name: permalink
         label: Permalink
         const: "/tags/"
+  tag:
+    type: page
+    label: Tag
+    description: An individual tag page
+    template: tag
+    fields:
+      - type: string
+        name: title
+        label: Tag Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        default: "/tags/tag_name"
+      - type: string
+        name: taxonomy
+        label: Taxonomy
             
