@@ -740,4 +740,27 @@ models:
       - type: string
         name: taxonomy
         label: Taxonomy
+  collection:
+    type: page
+    label: Collection
+    description: A collection of pages
+    template: collection
+    fields:
+      - type: string
+        name: title
+        label: Collection Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        default: "/collection_name/"
+      - type: string
+        name: collection
+        label: specify the collection being referenced
+        required: true
+        default: "collection_not_specified"
+      - type: string
+        name: entries_layout
+        label: Entries Layout
+        const: "grid"
             
