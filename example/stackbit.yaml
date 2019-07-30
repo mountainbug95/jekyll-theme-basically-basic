@@ -600,4 +600,53 @@ models:
         name: permalink
         label: Permalink
         const: "/categories/"
+  home:
+    type: page
+    label: Home Page
+    description: The home page
+    singleInstance: true
+    file: index.html
+    template: home
+    fields:
+      - type: boolean
+        name: paginate
+        label: Paginate
+        description: Enables pagination on the page
+        default: true
+      - type: string
+        name: alt_title
+        label: Alt Title
+        description: Display this instead of the site title on the home page
+      - type: string
+        name: sub_title
+        label: Subtitle
+        description: The text displayed below the alt title (or subtitle) on the home page
+      - type: image
+        name: image
+        label: Home Image
+        description: The image displayed at the top of the home page
+      - type: markdown
+        name: introduction
+        label: Introduction
+        description: The home introduction content
+      - type: list
+        name: actions
+        label: Actions
+        description: Home action buttons
+        items:
+          type: object
+          labelField: label
+          fields:
+            - type: string
+              name: label
+              label: Button Label
+              description: The text displayed inside the button
+            - type: string
+              name: icon
+              label: Icon
+              description: The icon displayed next to the button label
+            - type: string
+              name: url
+              label: URL
+              widget: url
             
