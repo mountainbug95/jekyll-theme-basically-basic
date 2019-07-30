@@ -381,4 +381,27 @@ models:
             name: present
             label: Present
             default: "text not set"
+      - type: list
+        name: google_fonts
+        label: Google Fonts
+        items:
+          type: object
+          labelField: name
+          fields:
+            - type: string
+              name: name
+              label: Font Name
+              required: true
+            - type: string
+              name: weights
+              label: Font Weights
+              description: Must be a comma delimited list
+              required: true
+              default: "400,400i,600,600i"
+      - type: list
+        name: navigation_pages
+        label: Navigation Pages
+        description: "A list of pages to be displayed in the site menu (must reference .md files)"
+        items:
+          type: string
             
