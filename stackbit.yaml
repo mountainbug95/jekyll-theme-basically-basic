@@ -6,7 +6,6 @@ publishDir: "_site"
 dataDir: "_data"
 pagesDir: ""
 pageTemplateKey: layout
-baseurl: "/example/"
 metadata:
   title: Basically Basic
   description: "A substitute for the default Minima, with a few enhancements thrown in for good measure."
