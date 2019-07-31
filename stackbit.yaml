@@ -506,6 +506,22 @@ models:
             label: Menu
             default: "text not set"
           - type: string
+            name: search
+            label: Search
+            default: "text not set"
+          - type: string
+            name: site_search
+            label: Site Search
+            default: "text not set"
+          - type: string
+            name: results_found
+            label: Results Found
+            default: "text not set"
+          - type: string
+            name: search_placeholder_text
+            label: Search Placeholder Text
+            default: "text not set"
+          - type: string
             name: home
             label: Home
             default: "text not set"
@@ -577,7 +593,7 @@ models:
     label: About Page
     description: The about page
     singleInstance: true
-    file: about.md
+    file: "{about.md,docs/about.md,example/about.md}"
     template: about
     fields:
       - type: string
@@ -589,7 +605,7 @@ models:
     label: Categories Page
     description: The categories page
     singleInstance: true
-    file: categories.md
+    file: "{categories.md,docs/categories.md,example/categories.md}"
     template: categories
     fields:
       - type: string
@@ -605,7 +621,7 @@ models:
     label: Home Page
     description: The home page
     singleInstance: true
-    file: index.html
+    file: "{index.html,index.md}"
     template: home
     fields:
       - type: boolean
@@ -653,7 +669,7 @@ models:
     type: page
     label: Page
     description: Generic page layout
-    file: 404.md
+    file: "{404.md,docs/404.md,example/404.md}"
     template: page
     fields:
       - type: string
@@ -667,7 +683,7 @@ models:
   post:
     type: page
     label: Post
-    folder: "_posts"
+    folder: "{_posts,docs/_posts,example/_posts}"
     template: post
     fields:
       - type: string
@@ -712,7 +728,7 @@ models:
     label: Posts
     description: The posts page
     singleInstance: true
-    file: posts.md
+    file: "{posts.md,docs/posts.md,example/posts.md}"
     template: posts
     fields:
       - type: string
@@ -732,7 +748,7 @@ models:
     label: Tags
     description: The tags archive
     singleInstance: true
-    file: tags.md
+    file: "{tags.md,docs/tags.md,example/tags.md}"
     template: tags
     fields:
       - type: string
@@ -748,7 +764,7 @@ models:
     label: Tag
     description: An individual tag page
     template: tag
-    exclude: "{_posts/**,_recipes/**}"
+    exclude: "{_posts/**,_recipes/**,docs/_posts/**,docs/_recipes/**,example/_posts/**,example/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -766,7 +782,7 @@ models:
     label: Collection
     description: A collection of pages
     template: collection
-    exclude: "{_posts/**,_recipes/**}"
+    exclude: "{_posts/**,_recipes/**,docs/_posts/**,docs/_recipes/**,example/_posts/**,example/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -790,7 +806,7 @@ models:
     label: Category
     description: A category Page
     template: category
-    exclude: "{_posts/**,_recipes/**}"
+    exclude: "{_posts/**,_recipes/**,docs/_posts/**,docs/_recipes/**,example/_posts/**,example/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -808,7 +824,7 @@ models:
     label: Recipe
     description: A recipie page
     template: post
-    folder: "_recipes"
+    folder: "{_recipes,docs/_recipes,example/_recipes}"
     fields:
       - type: string
         name: title
@@ -830,4 +846,17 @@ models:
             name: caption
             label: Image Caption
             description: The caption used for the recipe image
+  githubdoc:
+    type: page
+    label: Github Doc
+    description: placeholder layout for github docs
+    template: page
+    folder: ".github/ISSUE_TEMPLATE"
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: about
+        label: About
             
