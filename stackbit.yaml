@@ -1,11 +1,12 @@
 stackbitVersion: ~0.2.34
 ssgName: jekyll
 uploadDir: images
-buildCommand: "sudo apt-get install ruby ruby-all-dev && bundle exec jekyll build"
+buildCommand: "bundle exec jekyll build"
 publishDir: "_site"
 dataDir: "_data"
 pagesDir: ""
 pageTemplateKey: layout
+baseurl: "/example/"
 metadata:
   title: Basically Basic
   description: "A substitute for the default Minima, with a few enhancements thrown in for good measure."
