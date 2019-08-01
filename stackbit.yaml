@@ -2,7 +2,7 @@ stackbitVersion: ~0.2.34
 ssgName: jekyll
 uploadDir: images
 staticDir: "/assets"
-buildCommand: "echo 'example' >> .gitignore && echo 'docs' >> .gitignore && echo '.github' >> .gitignore &&gem install jekyll bundler && bundle install && bundle exec jekyll build"
+buildCommand: "gem install jekyll bundler && bundle install && bundle exec jekyll build"
 publishDir: "_site"
 dataDir: "_data"
 pagesDir: ""
@@ -765,7 +765,7 @@ models:
     label: Tag
     description: An individual tag page
     template: tag
-    exclude: "{_posts/**,_recipes/**,docs/*,docs/**/*,example/*,example/**/*}"
+    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -807,7 +807,7 @@ models:
     label: Category
     description: A category Page
     template: category
-    exclude: "{_posts/**,_recipes/**,docs/*,docs/**/*,example/*,example/**/*}"
+    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -861,40 +861,4 @@ models:
       - type: string
         name: about
         label: about
-  misccategory:
-    type: page
-    label: Category
-    description: A category Page
-    template: category
-    file: "{example/edge-case.md,docs/edge-case.md}"
-    fields:
-      - type: string
-        name: title
-        label: Category Title
-        required: true
-      - type: string
-        name: permalink
-        label: Permalink
-        default: "/categories/category_name/"
-      - type: string
-        name: taxonomy
-        label: Taxonomy
-  misctag:
-    type: page
-    label: Tag
-    description: An individual tag page
-    template: tag
-    file: "{example/markup.md,docs/markup.md}"
-    fields:
-      - type: string
-        name: title
-        label: Tag Title
-        required: true
-      - type: string
-        name: permalink
-        label: Permalink
-        default: "/tags/tag_name"
-      - type: string
-        name: taxonomy
-        label: Taxonomy
             
