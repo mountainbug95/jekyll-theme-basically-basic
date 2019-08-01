@@ -594,7 +594,7 @@ models:
     label: About Page
     description: The about page
     singleInstance: true
-    file: "about.md"
+    file: "{about.md,example/about.md,docs/about.md}"
     template: about
     fields:
       - type: string
@@ -606,7 +606,7 @@ models:
     label: Categories Page
     description: The categories page
     singleInstance: true
-    file: "categories.md"
+    file: "{categories.md,example/categories.md,docs/categories.md}"
     template: categories
     fields:
       - type: string
@@ -670,7 +670,7 @@ models:
     type: page
     label: Page
     description: Generic page layout
-    file: "404.md"
+    file: "{404.md,example/404.md,docs/404.md}"
     template: page
     fields:
       - type: string
@@ -684,7 +684,7 @@ models:
   post:
     type: page
     label: Post
-    folder: "_posts"
+    folder: "{_posts,example/_posts,docs/_posts}"
     template: post
     fields:
       - type: string
@@ -729,7 +729,7 @@ models:
     label: Posts
     description: The posts page
     singleInstance: true
-    file: "posts.md"
+    file: "{posts.md,example/posts.md,docs/posts.md}"
     template: posts
     fields:
       - type: string
@@ -749,7 +749,7 @@ models:
     label: Tags
     description: The tags archive
     singleInstance: true
-    file: "tags.md"
+    file: "{tags.md,example/tags.md,docs/tags.md}"
     template: tags
     fields:
       - type: string
@@ -783,7 +783,7 @@ models:
     label: Collection
     description: A collection of pages
     template: collection
-    exclude: "{_posts/**,_recipes/**,docs/*,docs/**/*,example/*,example/**/*}"
+    exclude: "{_posts/**,_recipes/**,docs/_posts/**,docs/_recipes/**,example/_posts/**,example/_recipes/**}"
     fields:
       - type: string
         name: title
@@ -825,7 +825,7 @@ models:
     label: Recipe
     description: A recipie page
     template: post
-    folder: "_recipes"
+    folder: "{_recipes,example/_recipes,docs/_recipes}"
     fields:
       - type: string
         name: title
@@ -854,69 +854,47 @@ models:
     template: page
     folder: "{.github}"
     file: "{.github/**/*,.github/*}"
-  miscabout:
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: about
+        label: about
+  misccategory:
     type: page
-    label: Misc
-    description: Misc files
-    template: about
-    folder: "{example,docs}"
-    file: "{example/about.md,docs/about.md}"
-  misccategories:
-    type: page
-    label: Misc
-    description: Misc files
-    template: categories
-    folder: "{example,docs}"
-    file: "{example/categories.md,docs/categories.md}"
-  miscpost:
-    type: page
-    label: Misc
-    description: Misc files
-    template: post
-    folder: "{example/_posts,docs/_posts}"
-  miscrecipes:
-    type: page
-    label: Misc
-    description: Misc files
-    template: collection
-    file: "{example/recipes.md,docs/recipes.md}"
-  miscrecipe:
-    type: page
-    label: Misc
-    description: Misc files
-    template: post
-    folder: "{example/_recipes,docs/_recipes}"
-  miscedge:
-    type: page
-    label: Misc
-    description: Misc files
+    label: Category
+    description: A category Page
     template: category
     file: "{example/edge-case.md,docs/edge-case.md}"
+    fields:
+      - type: string
+        name: title
+        label: Category Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        default: "/categories/category_name/"
+      - type: string
+        name: taxonomy
+        label: Taxonomy
   misctag:
     type: page
-    label: Misc
-    description: Misc files
+    label: Tag
+    description: An individual tag page
     template: tag
     file: "{example/markup.md,docs/markup.md}"
-  miscposts:
-    type: page
-    label: Misc
-    description: Misc files
-    template: posts
-    folder: "{example,docs}"
-    file: "{example/posts.md,docs/posts.md}"
-  misctags:
-    type: page
-    label: Misc
-    description: Misc files
-    template: tags
-    folder: "{example,docs}"
-    file: "{example/tags.md,docs/tags.md}"
-  miscnotfound:
-    type: page
-    label: Misc
-    description: Misc files
-    template: page
-    folder: "{example,docs}"
-    file: "{example/404.md,docs/404.md}"
+    fields:
+      - type: string
+        name: title
+        label: Tag Title
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        default: "/tags/tag_name"
+      - type: string
+        name: taxonomy
+        label: Taxonomy
             
