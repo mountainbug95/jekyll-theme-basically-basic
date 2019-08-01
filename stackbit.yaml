@@ -795,6 +795,7 @@ models:
     label: Tag
     description: An individual tag page
     template: tag
+    match: "**/**/_tags/**"
     exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**}"
     fields:
       - type: string
@@ -837,7 +838,8 @@ models:
     label: Category
     description: A category Page
     template: category
-    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**,**/*404.md,**/*cv.md,**/*recipes.md}"
+    match: "**/**/_categories/**"
+    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**,**/*404.md,**/*cv.md,**/*recipes.md,**/*about.md}"
     fields:
       - type: string
         name: title
