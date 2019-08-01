@@ -626,7 +626,7 @@ models:
     label: About Page
     description: The about page
     singleInstance: true
-    file: "{about.md,example/about.md,docs/about.md}"
+    file: "**/*about.md"
     template: about
     fields:
       - type: string
