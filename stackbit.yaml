@@ -183,7 +183,7 @@ models:
                   default: true
   cv:
     type: data
-    label: Curriculum Vitae
+    label: Curriculum Vitæ data
     file: cv.json
     fields:
       - type: object
@@ -591,8 +591,9 @@ models:
           type: string
   cvpage:
     type: page
-    label: Curriculum Vitæ
+    label: Curriculum Vitæ Page
     description: Curriculum vitæ page
+    singleInstance: true
     file: "**/*cv.md"
     template: cv
     fields:
@@ -814,7 +815,7 @@ models:
     label: Collection
     description: A collection of pages
     template: collection
-    exclude: "{_posts/**,_recipes/**,docs/_posts/**,docs/_recipes/**,example/_posts/**,example/_recipes/**}"
+    match: "**/*recipes.md"
     fields:
       - type: string
         name: title
@@ -838,7 +839,7 @@ models:
     label: Category
     description: A category Page
     template: category
-    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**,**/*404.md,**/*cv.md}"
+    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**,**/*404.md,**/*cv.md,**/*recipes.md}"
     fields:
       - type: string
         name: title
