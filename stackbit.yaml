@@ -670,7 +670,7 @@ models:
     type: page
     label: Page
     description: Generic page layout
-    file: "{404.md,example/404.md,docs/404.md}"
+    file: "**/404.md"
     template: page
     fields:
       - type: string
