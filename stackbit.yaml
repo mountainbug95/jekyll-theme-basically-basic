@@ -2,7 +2,7 @@ stackbitVersion: ~0.2.34
 ssgName: jekyll
 uploadDir: images
 staticDir: "/assets"
-buildCommand: "ls && rm -r ./example && rm -r ./docs && gem install jekyll bundler && bundle install && bundle exec jekyll build"
+buildCommand: "gem install jekyll bundler && bundle install && bundle exec jekyll build"
 publishDir: "_site"
 dataDir: "_data"
 pagesDir: ""
