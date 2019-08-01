@@ -622,7 +622,7 @@ models:
     label: Home Page
     description: The home page
     singleInstance: true
-    file: "{index.html,index.md}"
+    file: "index.md"
     template: home
     fields:
       - type: boolean
