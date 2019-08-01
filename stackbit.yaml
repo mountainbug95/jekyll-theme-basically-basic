@@ -589,6 +589,37 @@ models:
         description: "A list of pages to be displayed in the site menu (must reference .md files)"
         items:
           type: string
+  cvpage:
+    type: page
+    label: Curriculum Vitæ
+    description: Curriculum vitæ page
+    file: "**/*cv.md"
+    template: cv
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: object
+          labelField: label
+          fields:
+            - type: string
+              name: label
+              label: Button Label
+              description: The text displayed inside the button
+              required: true
+            - type: string
+              name: icon
+              label: Button Icon
+              description: The Icon displayed beside the button label
+            - type: string
+              name: url
+              label: URL
+              widget: url
   about:
     type: page
     label: About Page
@@ -807,7 +838,7 @@ models:
     label: Category
     description: A category Page
     template: category
-    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**}"
+    exclude: "{_posts/**,_recipes/**,example/_posts/**,example/_recipes/**,docs/_posts/**,docs/_recipes/**,**/*404.md,**/*cv.md}"
     fields:
       - type: string
         name: title
