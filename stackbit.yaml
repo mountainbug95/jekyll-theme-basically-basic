@@ -814,7 +814,7 @@ models:
     label: Collection
     description: A collection of pages
     template: collection
-    match: "**/*recipes.md"
+    match: "**/**/_collections/**"
     fields:
       - type: string
         name: title
