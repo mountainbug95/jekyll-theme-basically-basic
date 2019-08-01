@@ -593,8 +593,7 @@ models:
     type: page
     label: Curriculum Vitæ Page
     description: Curriculum vitæ page
-    singleInstance: true
-    file: "**/*cv.md"
+    match: "**/*cv.md"
     template: cv
     fields:
       - type: string
@@ -625,8 +624,7 @@ models:
     type: page
     label: About Page
     description: The about page
-    singleInstance: true
-    file: "**/*about.md"
+    match: "**/*about.md"
     template: about
     fields:
       - type: string
