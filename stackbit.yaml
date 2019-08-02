@@ -612,10 +612,37 @@ models:
               label: Button Label
               description: The text displayed inside the button
               required: true
-            - type: string
+            - type: enum
               name: icon
               label: Button Icon
               description: The Icon displayed beside the button label
+              options:
+                - "arrow-left"
+                - "arrow-right"
+                - "bitbucket"
+                - "calendar"
+                - "codepen"
+                - "download"
+                - "dribbble"
+                - "email"
+                - "facebook"
+                - "flicker"
+                - "github"
+                - "gitlab"
+                - "googleplus"
+                - "instagram"
+                - "lastfm"
+                - "linkedin"
+                - "pdf"
+                - "pinterest"
+                - "rss"
+                - "soundcloud"
+                - "stackoverflow"
+                - "stopwatch"
+                - "tumblr"
+                - "twitter"
+                - "xing"
+                - "youtube"
             - type: string
               name: url
               label: URL
@@ -678,7 +705,7 @@ models:
         description: The home introduction content
       - type: list
         name: actions
-        label: Actions
+        label: Action Buttons
         description: Home action buttons
         items:
           type: object
@@ -688,10 +715,37 @@ models:
               name: label
               label: Button Label
               description: The text displayed inside the button
-            - type: string
+            - type: enum
               name: icon
-              label: Icon
-              description: The icon displayed next to the button label
+              label: Button Icon
+              description: The Icon displayed beside the button label
+              options:
+                - "arrow-left"
+                - "arrow-right"
+                - "bitbucket"
+                - "calendar"
+                - "codepen"
+                - "download"
+                - "dribbble"
+                - "email"
+                - "facebook"
+                - "flicker"
+                - "github"
+                - "gitlab"
+                - "googleplus"
+                - "instagram"
+                - "lastfm"
+                - "linkedin"
+                - "pdf"
+                - "pinterest"
+                - "rss"
+                - "soundcloud"
+                - "stackoverflow"
+                - "stopwatch"
+                - "tumblr"
+                - "twitter"
+                - "xing"
+                - "youtube"
             - type: string
               name: url
               label: URL
@@ -833,6 +887,7 @@ models:
         name: entries_layout
         label: Entries Layout
         const: "grid"
+        hidden: true
   category:
     type: page
     label: Category
